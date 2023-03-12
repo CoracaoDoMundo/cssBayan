@@ -125,7 +125,7 @@
 .accordion-item-label:focus-within .accordion-item-text {
   color: #fafafa;
   font-weight: 700;
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 
 .accordion-item-label:focus-within .accordion-item-icon {
@@ -148,7 +148,7 @@
   .accordion-block:hover .accordion-item-label {
     color: #fafafa;
     font-weight: 700;
-    transition: 0.3s;
+    /* transition: 0.3s; */
   }
 
   .accordion-block:hover .accordion-item-icon {
@@ -201,9 +201,16 @@
     padding: 0.5em 0;
   }
 
-  .accordion-item:hover .meme-pic {
-    height: 95%;
-    padding: 0.5em 0;
+  .accordion-item-label {
+    padding: 0 2% 0 5%;
+  }
+
+  @media (hover: hover) {
+    .accordion-item:hover .meme-pic {
+      width: 80%;
+      height: auto;
+      padding: 0.5em 0;
+    }
   }
 }
 
@@ -213,13 +220,7 @@
     margin: 0 0 4% 2%;
   }
   .accordion-item-input:checked ~ .meme-pic {
-    width: 60%;
-    height: auto;
-    padding: 0.5em 0;
-  }
-
-  .accordion-item:hover .meme-pic {
-    width: 60%;
+    width: 80%;
     height: auto;
     padding: 0.5em 0;
   }
@@ -228,42 +229,12 @@
     font-size: 1em;
   }
 
-  .accordion-item-label:has(.accordion-item-input:checked) {
-    background: linear-gradient(0deg, transparent 85%, rgba(72, 64, 80, 1) 85%);
-  }
-
-  @media (hover: hover) {
-    .accordion-item-label:has(.accordion-item-input:checked):hover {
-      background: linear-gradient(
-        0deg,
-        transparent 85%,
-        rgba(72, 64, 80, 1) 85%
-      );
-    }
-
-    .accordion-item:hover .accordion-item-label {
-      background: linear-gradient(
-        0deg,
-        transparent 85%,
-        rgba(72, 64, 80, 1) 85%
-      );
-    }
+  .accordion-item-icon {
+    margin: 0.6em 2% 0.6em auto;
   }
 }
 
 @media (max-width: 400px) {
-  .accordion-item-input:checked ~ .meme-pic {
-    width: 80%;
-    height: auto;
-    padding: 0.5em 0;
-  }
-
-  .accordion-item:hover .meme-pic {
-    width: 80%;
-    height: auto;
-    padding: 0.5em 0;
-  }
-
   .accordion-item-text {
     font-size: 0.8em;
     line-height: 0;
@@ -310,7 +281,7 @@
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 320px) {
   .main-header {
     font-size: 1.2em;
   }
