@@ -39,13 +39,83 @@
 
 .wrapper {
   width: 900px;
-  margin: 2% auto 0 auto;
+  margin: 1.5% auto 0 auto;
 }
 
-.accordion-item-block {
+.main-header {
+  font-size: 3em;
+  margin: 0 0 2% 2%;
+}
+
+.accordion-block {
+  background-color: rgb(162, 145, 180);
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.accordion-item {
+  /* border-bottom: 2px solid rgb(72, 64, 80); */
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+/* .accordion-item-input[type="radio"]:checked {
+  background-color: rgb(72, 64, 80);
+} */
+
+.accordion-item-label:focus-within {
+  background-color: rgb(72, 64, 80);
+}
+
+.accordion-item-label:focus-within .accordion-item-text {
+  color: #fafafa;
+  font-weight: 700;
+}
+
+.accordion-item-label:focus-within .accordion-item-icon {
+  opacity: 1;
+}
+
+.accordion-block:hover {
+  background-color: rgb(72, 64, 80);
+  transition: .2s;
+}
+
+.accordion-block:hover .accordion-item-text {
+  color: #fafafa;
+  font-weight: 700;
+  transition: .5s;
+}
+
+.accordion-block:hover .accordion-item-icon {
+    opacity: 1;
+    transition: .5s;
+  }
+
+.accordion-item:hover .accordion-item-icon {
+  transform: rotate(135deg);
+  transition: .5s;
+}
+
+.accordion-item:hover .accordion-item-meme-container {
+  height: auto;
+  padding: 20px 0;
+  transition: .5s;
+}
+
+.accordion-item:hover .meme-pic {
+  height: 380px;
+  transition: .5s;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-item-label {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  cursor: pointer;
   padding: 0 2% 0 2%;
 }
 
@@ -54,18 +124,29 @@
   appearance: none;
   background-color: #fff;
   margin: 0;
+  width: 0;
+  height: 0;
+}
+
+.accordion-item-text {
+  font-size: 1.5em;
+  line-height: 0.5;
+  margin: 0.8em 0 0.8em 0;
 }
 
 .accordion-item-icon {
   height: 20px;
   width: 20px;
+  margin: 0.8em 2% 0.8em auto;
+  opacity: 0;
+  transition: .3s;
 }
 
 .accordion-item-meme-container {
   display: flex;
   justify-content: center;
+  height: 0;
+  background-color: white;
+  transition: .5s;
 }
 
-.meme-pic {
-  height: 450px;
-}
