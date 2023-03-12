@@ -1,0 +1,71 @@
+/* ubuntu-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/ubuntu-v20-latin-regular.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/ubuntu-v20-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/ubuntu-v20-latin-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./fonts/ubuntu-v20-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("./fonts/ubuntu-v20-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/ubuntu-v20-latin-regular.svg#Ubuntu") format("svg"); /* Legacy iOS */
+}
+/* ubuntu-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/ubuntu-v20-latin-700.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/ubuntu-v20-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/ubuntu-v20-latin-700.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./fonts/ubuntu-v20-latin-700.woff")
+      format("woff"),
+    /* Modern Browsers */ url("./fonts/ubuntu-v20-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("./fonts/ubuntu-v20-latin-700.svg#Ubuntu")
+      format("svg"); /* Legacy iOS */
+}
+
+.body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.wrapper {
+  width: 900px;
+  margin: 2% auto 0 auto;
+}
+
+.accordion-item-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2% 0 2%;
+}
+
+.accordion-item-input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+}
+
+.accordion-item-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.accordion-item-meme-container {
+  display: flex;
+  justify-content: center;
+}
+
+.meme-pic {
+  height: 450px;
+}
