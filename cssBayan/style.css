@@ -38,7 +38,7 @@
 }
 
 .wrapper {
-  width: 900px;
+  width: 60%;
   margin: 1.5% auto 0 auto;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .accordion-block {
-  border-radius: 10px;
+  border-radius: 0.6em;
   cursor: pointer;
   overflow: hidden;
 }
@@ -56,21 +56,19 @@
 .accordion-item {
   display: flex;
   flex-direction: column;
-  border-bottom: 2px solid rgb(255, 255, 255);
+  border-bottom: 0.15em solid rgb(255, 255, 255);
 }
 
 .accordion-item-label {
   background-color: rgb(162, 145, 180);
   display: grid;
   grid-template-areas: "text icon" "meme meme";
-  /* align-items: center; */
   cursor: pointer;
   padding: 0 2% 0 2%;
 }
 
 .meme-pic {
   grid-area: meme;
-  /* background-color: #fafafa; */
   height: 0;
   margin: auto;
   justify-self: center;
@@ -98,8 +96,8 @@
 
 .accordion-item-icon {
   grid-area: icon;
-  height: 20px;
-  width: 20px;
+  height: 1.3em;
+  width: 1.3em;
   margin: 0.8em 2% 0.8em auto;
   opacity: 0;
   transition: 0.3s;
@@ -111,13 +109,9 @@
   font-weight: 700;
 }
 
-.accordion-item-label:has(.accordion-item-input:checked):hover {
-  background: linear-gradient(0deg, transparent 90%, rgba(72, 64, 80, 1) 90%);
-}
-
 .accordion-item-input:checked ~ .meme-pic {
-  height: 380px;
-  padding: 20px 0;
+  height: 90.5%;
+  padding: 1.3em 0;
 }
 
 .accordion-item-input:checked ~ .accordion-item-icon {
@@ -136,35 +130,41 @@
   opacity: 1;
 }
 
-.accordion-block:hover
-  .accordion-item-label:not(
-    .accordion-item-label:has(.accordion-item-input:checked)
-  ):not(.accordion-item:hover .accordion-item-label) {
-  background-color: rgb(72, 64, 80);
-}
+@media (hover: hover) {
+  .accordion-item-label:has(.accordion-item-input:checked):hover {
+    background: linear-gradient(0deg, transparent 90%, rgba(72, 64, 80, 1) 90%);
+  }
 
-.accordion-block:hover .accordion-item-label {
-  color: #fafafa;
-  font-weight: 700;
-  transition: 0.3s;
-}
+  .accordion-block:hover
+    .accordion-item-label:not(
+      .accordion-item-label:has(.accordion-item-input:checked)
+    ):not(.accordion-item:hover .accordion-item-label) {
+    background-color: rgb(72, 64, 80);
+  }
 
-.accordion-block:hover .accordion-item-icon {
-  opacity: 1;
-  transition: 0.3s;
-}
+  .accordion-block:hover .accordion-item-label {
+    color: #fafafa;
+    font-weight: 700;
+    transition: 0.3s;
+  }
 
-.accordion-item:hover .accordion-item-icon {
-  transform: rotate(135deg);
-  transition: 0.5s;
-}
+  .accordion-block:hover .accordion-item-icon {
+    opacity: 1;
+    transition: 0.3s;
+  }
 
-.accordion-item:hover .accordion-item-label {
-  background: linear-gradient(0deg, transparent 90%, rgba(72, 64, 80, 1) 90%);
-}
+  .accordion-item:hover .accordion-item-icon {
+    transform: rotate(135deg);
+    transition: 0.5s;
+  }
 
-.accordion-item:hover .meme-pic {
-  height: 380px;
-  padding: 20px 0;
-  transition: 0.3s;
+  .accordion-item:hover .accordion-item-label {
+    background: linear-gradient(0deg, transparent 90%, rgba(72, 64, 80, 1) 90%);
+  }
+
+  .accordion-item:hover .meme-pic {
+    height: 90.5%;
+    padding: 1.3em 0;
+    transition: 0.3s;
+  }
 }
